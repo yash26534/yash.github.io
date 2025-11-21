@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<link rel="stylesheet" href="Style.css">
+<link rel="icon" type="image/x-icon" href="image/android-chrome-192x192.png"> 
+</head>
+<body>
+<header>
+<h2>Portfolio</h2>
+<nav>
+<ul>
+<li><a href="#hero">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+<section id="hero" class="hero">
+<h1>Hello, I'm <span>Yash Patel</span></h1>
+<img src="image/WhatsApp Image 2023-03-24 at 21.45.47.jpg" width="200" height="200">
+<p>Frontend Web Developer</p>
+<a href="mailto:yashpatel859635@gmail.com?subject=Job%20Inquiry%20from%20Website&body=Hello,%20I%20am%20interested%20in%20hiring%20you%20for..." class="hire-me-button">
+    Hire Me
+</a>
+<a href="Yash CV.pdf" download><button class="btn">Download CV</button></a>
+</section>
+<section id="about"><h2>About Me</h2><p>"Hello, I'm Yash, and I'm looking forward to connecting with you. I bring a strong focus in [HTML, CSS, JavaScript, React JS, MS Word]. I'm always eager to contribute and learn."</p></section>
+<section id="skills"><h2>Skills</h2>
+<div class="skill-box">
+<p>HTML</p><div class="bar"><span class="html"></span></div>
+<p>CSS</p><div class="bar"><span class="css"></span></div>
+<p>JavaScript</p><div class="bar"><span class="js"></span></div>
+</div></section>
+<section id="projects"><h2>Projects</h2>
+<div class="project-container">
+<div class="project-card">
+    <a href="HMS/HMS.html"><button class="btn"> Hospital Management Website</button></a></div>
+<div class="project-card">
+    <a href="Blog/Blog.html"><button class="btn">Blog Website</button></a></div>
+<div class="project-card">
+    <a href="new website/index.html"><button class="btn">Recipe App</button></a>
+</div>
+</div></section>
+<section id="contact"><h2>Contact</h2>
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea placeholder="Message"></textarea>
+<button class="btn">Send</button>
+</form></section>
+<footer><p>©2025 Yash Patel</p></footer>
+<script>
+const bars=document.querySelectorAll('.bar span');
+function animate(){bars.forEach(b=>{if(b.classList.contains('html'))b.style.width='90%';if(b.classList.contains('css'))b.style.width='85%';if(b.classList.contains('js'))b.style.width='75%';});}
+window.addEventListener('scroll',()=>{let top=document.querySelector('#skills').offsetTop;if(window.scrollY+window.innerHeight>=top+100){animate();}});
+</script>
+</body>
+</html>
